@@ -1,14 +1,16 @@
-# Theory and Practice of Finite Element Methods
+Dockerfile change to "FROM jiaqiknight/dealii:vscode-arm64"
 
-## Laboratory \#1
+Deal.ll tested on Apple m1 chip, allowing dockerfile to generate arm64, which can be run on vscode by ssh & container.
+please ref to : https://github.com/dealii-courses/sissa-mhpc-lab-02
 
-Goal of the laboratory: 
-- set up a modern programming environment
-- familiarse with git, VSCode, CMake, GoogleTest, and C++
+Or just run:
+docker pull jiaqiknight/dealii:vscode-arm64
 
-Tasks:
-- split the source file `pythagoras.cc` into two files, one containing
-the `main` function, and the other one containing the tests
-- move them to a `source` directory, and name them `main.cc` and `point_tests.cc`
-- modify the `CMakeLists.txt` file to ensure the program still compiles and run
-- Add three more tests that checks that the three-dimensional version of the `Point<dim>` class works as expected
+If you occur: fatal error:Killed signal terminated program cc1plus错误解决方法
+That is because your docker is set with low RAM，enlarge it.
+
+
+
+The test material is almost from https://github.com/dealii-courses/sissa-mhpc-theory-and-practice-of-fem
+
+Thanks Luca-heltai! I learned a lot. His course is very intersting.

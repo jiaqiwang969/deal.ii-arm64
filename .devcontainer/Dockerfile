@@ -1,6 +1,6 @@
-FROM heltai/dealii:vscode
+FROM jiaqiknight/dealii:vscode-arm64
 
-LABEL maintainer="luca.heltai@gmail.com"
+LABEL maintainer="jiaqiwang969@gmail.com"
 
 USER $USER
 
